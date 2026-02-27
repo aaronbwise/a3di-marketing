@@ -1,0 +1,57 @@
+# A3DI Content Calendar
+# Tracks planned and published content across all channels
+
+# Status values: idea | drafting | ready | scheduled | published
+# Type values: linkedin-post | linkedin-carousel | case-study | webinar | lead-magnet
+
+2026:
+  Q1:
+    - date: "2026-03-01"
+      type: linkedin-post
+      pillar: lessons-from-field
+      topic: "The one survey design mistake I see in almost every humanitarian assessment"
+      status: idea
+      file: null
+
+    - date: "2026-03-15"
+      type: linkedin-post
+      pillar: data-methods
+      topic: "Why your M&E data pipeline shouldn't live in Excel"
+      status: idea
+      file: null
+
+    - date: "2026-03-20"
+      type: linkedin-carousel
+      pillar: data-methods
+      topic: "5 signs your data collection tool needs a redesign"
+      status: idea
+      file: null
+
+    - date: "2026-03-31"
+      type: case-study
+      pillar: case-studies
+      topic: "[PROJECT 1] — Automated food security monitoring pipeline"
+      status: idea
+      file: null
+
+  Q2:
+    - date: "2026-04-15"
+      type: linkedin-post
+      pillar: sector-trends
+      topic: "Commentary on [upcoming sector report/guideline]"
+      status: idea
+      file: null
+
+    - date: "2026-05-01"
+      type: webinar
+      pillar: data-methods
+      topic: "Building Automated Data Pipelines for Longitudinal Assessments"
+      status: idea
+      file: null
+
+    - date: "2026-05-15"
+      type: lead-magnet
+      pillar: lessons-from-field
+      topic: "Survey Design Checklist for Humanitarian Assessments (PDF)"
+      status: idea
+      file: null

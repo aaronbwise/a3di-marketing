@@ -1,0 +1,35 @@
+# A3DI Marketing Config
+# Copy to config.yaml and fill in your values
+# NEVER commit config.yaml — it's gitignored
+
+anthropic:
+  api_key: "sk-ant-..."
+  model: "claude-sonnet-4-20250514"
+
+linkedin:
+  # Option 1: Buffer API for scheduling
+  buffer_access_token: ""
+  buffer_profile_id: ""
+  # Option 2: LinkedIn API direct (requires OAuth app)
+  # client_id: ""
+  # client_secret: ""
+  # access_token: ""
+
+analytics:
+  # Google Analytics (if added to a3di.dev)
+  ga_property_id: ""
+  ga_credentials_path: ""
+
+email:
+  # Brevo (formerly Sendinblue) or Mailchimp
+  provider: "brevo"  # or "mailchimp"
+  api_key: ""
+  list_id: ""
+
+defaults:
+  author: "Aaron Wise"
+  timezone: "UTC"
+  post_hashtags:
+    - "#HumanitarianData"
+    - "#DataForDevelopment"
+    - "#MEL"
