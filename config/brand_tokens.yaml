@@ -1,0 +1,131 @@
+# A3DI Brand Tokens
+# Canonical design values extracted from the live a3di.dev website.
+# Update this file whenever the website colors, fonts, or structure change.
+# Referenced by CLAUDE.md and available to all scripts via config.
+
+# ---------------------------------------------------------------------------
+# Colors (from dist/css/style.css and dist/css/utilities.css)
+# ---------------------------------------------------------------------------
+colors:
+  primary: "#3075ff"        # Blue — buttons, accents, about section background, icon color
+  secondary: "#0d1d3f"      # Dark navy — headings, body text, footer background, links
+  dark: "#002240"           # Darkest navy — navbar brand area
+  light: "#f4f4f4"          # Light grey — background alternation
+  white: "#ffffff"          # Card backgrounds, button text
+  overlay: "rgba(0,0,0,0.55)"  # Hero image overlay
+
+# Bootstrap theme overrides (set in utilities.css via --bs-* custom properties)
+bootstrap_overrides:
+  bs_primary: "#3075ff"
+  bs_secondary: "#0d1d3f"
+  bs_dark: "#002240"
+  bs_light: "#f4f4f4"
+
+# ---------------------------------------------------------------------------
+# Typography
+# ---------------------------------------------------------------------------
+typography:
+  font_family: "Montserrat"
+  font_source: "Google Fonts"
+  font_weights: [300, 400]   # 300 used for headings, 400 for body
+  heading_line_height: 1.2
+  body_line_height: 1.6
+  # Responsive type (clamp values from style.css)
+  showcase_heading: "clamp(1.75rem, 5vw, 3.125rem)"
+  about_paragraph: "clamp(1rem, 2.5vw, 1.25rem)"
+
+# ---------------------------------------------------------------------------
+# Website structure (a3di.dev)
+# ---------------------------------------------------------------------------
+website:
+  live_url: "https://www.a3di.dev"
+  hosting: "Netlify"
+  framework: "Bootstrap 5.3.3"
+  build_step: false  # No build tools — edit dist/ directly
+  analytics: "Google Analytics 4 (G-431J69QZ4M, loaded after GDPR consent)"
+  contact_form: "Netlify Forms + reCAPTCHA (modal)"
+
+  sections:
+    - name: navbar
+      notes: "Logo + Home / Services / About / Contact button"
+    - name: hero
+      headline: "Better results through data"
+      subhead: "A3DI helps development & humanitarian organisations use data to generate evidence-based, actionable insights for their programmes"
+    - name: services
+      cards:
+        - "Survey Design & Implementation"
+        - "Data Analysis & Management"
+        - "Visualisation & Comms"
+        - "Trainings"
+    - name: about
+      headline: "Hi, I'm Aaron"
+      links_to: "https://www.aaronbwise.com"
+    - name: footer
+      tagline: "Advanced Analytics for Actionable Development Insights"
+      social: [linkedin, github, twitter]
+    - name: cookie_consent
+      notes: "GDPR banner — analytics load only after acceptance"
+
+  # Planned additions (from marketing_plan_2026.md)
+  planned:
+    - section: case_studies
+      status: "not yet on site"
+      priority: "high — #1 website improvement in marketing plan"
+    - improvement: client_logos_bar
+      status: "not yet on site"
+    - improvement: testimonial_quotes
+      status: "not yet on site"
+    - improvement: lead_magnet_pdf
+      status: "not yet on site"
+    - improvement: calendly_cta
+      status: "not yet on site"
+
+# ---------------------------------------------------------------------------
+# Branding assets
+# ---------------------------------------------------------------------------
+branding_assets:
+  local_path: "../branding/Fiverr/A3DI"
+  brand_book: "../branding/Fiverr/A3DI/Brand Book.pdf"
+  logos:
+    - "Logo-01.png"
+    - "Logo-02.png"
+    - "Logo-03.png"
+    - "Logo-04.png"
+  icons:
+    - "Icon-01.png"
+    - "Icon-02.png"
+    - "Icon-03.png"
+  source_files:
+    - "Logo.ai"
+    - "Icon.ai"
+    - "Pattern.eps"
+  favicon: "Favicon.jpg"
+  fonts_bundled:
+    - "Montserrat.zip"
+    - "Lora.zip"   # Secondary font (not currently used on website)
+
+# ---------------------------------------------------------------------------
+# Data visualisation guides
+# ---------------------------------------------------------------------------
+data_viz_guides:
+  local_path: "../data_viz_guide"
+  files:
+    - "CHARTstyleguide_20170505.pdf"
+    - "Intelligence-Data-Styleguide_v2_0.pdf"
+
+# ---------------------------------------------------------------------------
+# Cross-site ecosystem
+# ---------------------------------------------------------------------------
+ecosystem:
+  a3di_dev:
+    purpose: "Sell consulting services"
+    audience: "M&E officers, programme managers"
+    leads_with: "Services, sectors, credibility"
+  aaronbwise_com:
+    purpose: "Professional CV / career history"
+    audience: "Anyone evaluating background"
+    leads_with: "Profile, consolidated experience, education"
+  github_aaronbwise:
+    purpose: "Technical portfolio"
+    audience: "Technical peers, collaborators"
+    leads_with: "What you build, tech stack, code"

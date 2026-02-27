@@ -33,3 +33,11 @@ defaults:
     - "#HumanitarianData"
     - "#DataForDevelopment"
     - "#MEL"
+
+# Paths to related A3DI directories (relative to this repo root)
+# These allow scripts to read from / write to the website and branding assets
+paths:
+  website_root: "../website/landing_page"
+  website_dist: "../website/landing_page/dist"
+  branding: "../branding/Fiverr/A3DI"
+  data_viz_guide: "../data_viz_guide"

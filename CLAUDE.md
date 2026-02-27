@@ -29,3 +29,25 @@ serving humanitarian and development organizations. Aaron Wise is the sole opera
 - Content: `YYYY-MM-DD-slug.md`
 - Scripts: snake_case.py
 - Data: snake_case.csv or .json
+
+## Related directories (same parent: `INTERNAL/`)
+All paths are relative to this repo's root (`INTERNAL/marketing/`).
+
+- **`../website/landing_page/`** — a3di.dev source (static HTML/CSS, deployed via Netlify)
+  - Deployable files in `dist/` (no build step — edit directly)
+  - CSS variables defined in `dist/css/style.css`:
+    - `--primary-color: #3075ff` (blue — buttons, accents, about section background)
+    - `--secondary-color: #0d1d3f` (dark navy — headings, body text, footer background)
+    - `--dark-color: #002240` (darkest navy — footer, nav)
+    - `--light-color: #f4f4f4` (light grey — backgrounds)
+  - Bootstrap theme overrides in `dist/css/utilities.css`
+  - Font: Montserrat (Google Fonts)
+  - Sections: Navbar, Hero ("Better results through data"), Services (4 cards), About, Footer, Contact modal (Netlify Forms + reCAPTCHA)
+  - No case studies section yet — adding this is a marketing plan priority
+  - Has its own CLAUDE.md at `docs/CLAUDE.md` and update plan at `docs/UPDATE_PLAN.md`
+- **`../branding/Fiverr/A3DI/`** — Logo files (PNG/JPG, plus `.ai` source), brand book PDF, mockups, source font zips (Montserrat, Lora)
+- **`../data_viz_guide/`** — Chart and data style guides (PDFs: CHART style guide, Intelligence Data Styleguide)
+- **`../website/website_text.txt`** — Original website copy (services descriptions, about text)
+
+## Brand tokens
+Canonical design tokens are in `config/brand_tokens.yaml`. Reference this file when generating any visual content, checking brand consistency, or working on the website.
