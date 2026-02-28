@@ -28,11 +28,9 @@ a3di-marketing/
 │
 ├── scripts/                   # Automation scripts
 │   ├── content_gen.py         # AI-assisted content generation from bullet points
-│   ├── schedule_post.py       # Push drafts to Buffer/LinkedIn API
-│   ├── analytics_pull.py      # Pull LinkedIn analytics into data/
+│   ├── generate_case_study.py # Generate case study from project materials
 │   ├── lead_tracker.py        # Simple CRM / lead tracking utilities
 │   └── utils/
-│       └── helpers.py
 │
 ├── pipelines/                 # Automated workflows
 │   └── weekly_review.py       # Weekly KPI snapshot + content calendar check
@@ -56,10 +54,6 @@ a3di-marketing/
 ├── docs/                      # Strategy docs & plans
 │   └── marketing_plan_2026.md
 │
-├── .github/
-│   └── workflows/
-│       └── weekly_digest.yml  # GitHub Action: weekly KPI email
-│
 ├── .gitignore
 ├── requirements.txt
 ├── Makefile                   # Common commands as make targets
@@ -72,8 +66,7 @@ a3di-marketing/
 ```bash
 # Jot bullet points into a draft, then let AI flesh it out
 make draft slug=survey-design-tips
-# Edit the generated draft in VS Code, then schedule
-make schedule file=content/posts/drafts/2026-03-01-survey-design-tips.md
+# Edit the generated draft in VS Code, then publish manually
 ```
 
 ### 2. Weekly review
@@ -85,12 +78,6 @@ make weekly-review
 ### 3. Track a new lead
 ```bash
 python scripts/lead_tracker.py add --name "Jane Doe" --org "UNICEF" --source "linkedin" --notes "Interested in data pipeline training"
-```
-
-### 4. Pull analytics
-```bash
-make analytics
-# Pulls LinkedIn post performance into data/analytics/
 ```
 
 ## Content Naming Convention
@@ -107,7 +94,6 @@ Each file has YAML frontmatter for metadata (see templates).
 |---------|-------------|
 | `make draft slug=<name>` | Create a new draft from template |
 | `make generate file=<path>` | AI-generate content from bullet points in a draft |
-| `make schedule file=<path>` | Schedule a post via Buffer API |
-| `make analytics` | Pull latest LinkedIn analytics |
+| `make case-study slug=<name>` | Generate case study from project materials |
 | `make weekly-review` | Run weekly KPI + calendar review |
 | `make leads` | Show current lead pipeline |

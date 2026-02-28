@@ -12,7 +12,6 @@ publish_to:
   - website
   - linkedin
   - pdf
-hook_angle: "disparity + technical"
 ---
 
 # Uncovering Who Is Furthest Behind: A Multi-Country MCHN Equity Analysis
